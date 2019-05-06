@@ -2,32 +2,34 @@
 
 ## Usage
 ```
-npm install -S <your project name>
+npm install -S leaflet.chinaProvider
 ```
 
 ### Example
-- by es6 import
+- baidu tile layer
     ```javascript
-    import JSToolkit from 'js-toolkit';
-
-    const cat = new JSToolkit({ name: 'cat' });
-    cat.say('miao miao');
+    import L from 'leaflet';
+    import 'leaflet.chinaProvider';
+    const map = L.map('map', {
+      crs: L.CRS.Baidu, // if use baidu
+      center: [31.59, 120.29],
+      zoom: 12,
+      maxZoom: 18,
+      minZoom: 5
+    })
+    L.tileLayer.chinaProvider('Baidu.Normal.Map', { customid }).addTo(map);
     ```
-
-- by html
-    ```html
-    <html>
-      <body>
-        <!-- todo something -->
-        <script type="text/javascript" src="/index.js"></script></body>
-        <script>
-        (function() {
-            var cat = new JSToolkit({ name: 'cat' })
-            cat.say('miao miao')
-        })();
-        </script>
-      </body>
-    </html>
+- google tile layer
+    ```javascript
+    import L from 'leaflet';
+    import 'leaflet.chinaProvider';
+    const map = L.map('map', {
+      center: [31.59, 120.29],
+      zoom: 12,
+      maxZoom: 18,
+      minZoom: 5
+    })
+    L.tileLayer.chinaProvider('Google.Normal.Map').addTo(map);
     ```
 
 ![alt text](public/example.jpg)
@@ -42,6 +44,5 @@ npm install -S <your project name>
 
 ## feature list
 ### 0.1.0
-- [ ] todo feature 1
-- [ ] todo feature 2
-- [ ] todo feature 3
+- [ ] 拆分各个地图公司的配置，以统一出口对外输出
+- [ ] proj2leaflet 需要引入 leaflet， 怎么解决

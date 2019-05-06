@@ -1,5 +1,5 @@
 {
-  "name": "js-toolkit",
+  "name": "leaflet.chinaprovider",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
@@ -14,8 +14,8 @@
   "author": "linkaka",
   "license": "ISC",
   "dependencies": {
-    "html-webpack-plugin": "^3.2.0",
-    "webpack-bundle-analyzer": "^3.3.2"
+    "leaflet": "^1.4.0",
+    "proj4leaflet": "^1.0.2"
   },
   "repository": {},
   "devDependencies": {
@@ -31,6 +31,7 @@
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "html-webpack-plugin": "^3.2.0",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^4.0.1",
     "nyc": "^13.1.0",
@@ -38,8 +39,10 @@
     "pre-push": "^0.1.1",
     "sinon": "^5.0.1",
     "webpack": "^4.30.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
   },
   "keywords": []
 }
